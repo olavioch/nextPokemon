@@ -1,7 +1,11 @@
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 export default function Todo({todo}){
-
+    const router = useRouter()
+    if(router.isFallback){
+        return(<h1>loading ...</h1>)
+    }
     return(
         <>
             <Link href="/todos" style={{textAlign :'center'}}><a>Voltar</a></Link>
