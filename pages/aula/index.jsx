@@ -13,7 +13,7 @@ export default function Aula() {
       <h1 className={styles.titleHome}>hello world!</h1>
       <div className={styles.layoutImg}>
         <Image 
-          src="/item.png"
+          src="/MarvelLogo.svg"
           width='300px'
           height='300px'
           alt='icone next'

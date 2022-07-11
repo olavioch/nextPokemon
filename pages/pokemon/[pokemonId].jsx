@@ -1,6 +1,14 @@
 import Image from "next/image"
 import styles from "../../styles/Card.module.css"
+import { Router, useRouter } from "next/router"
+
 export default function Pokemon({pokemon}){
+    const router = useRouter()
+    
+    if(router.isFallback){
+        return<h1>loading...</h1>
+    }
+    
     return(
         <div className={styles.pokemonPage}>
             <h1>{pokemon.name}</h1>
@@ -45,7 +53,7 @@ export const getStaticPaths = async() => {
 
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 }
 
