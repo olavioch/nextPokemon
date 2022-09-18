@@ -10,6 +10,7 @@ export default function Card({pokemon}){
                 width='120'
                 height='120'
                 alt={pokemon.name}
+                
             />
             <h3>{pokemon.name}</h3>
             <Link href={`/pokemon/${pokemon.id}`}><a className={styles.link}>Detalhes</a></Link>
